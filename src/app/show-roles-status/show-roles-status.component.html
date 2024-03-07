@@ -1,0 +1,10 @@
+<button class="btn btn-danger" (click)="sendPermission(1)">Editor</button><br>
+<button class="btn btn-success" (click)="sendPermission(2)">User</button><br>
+<button class="btn btn-primary" (click)="sendPermission(3)">Editor, User</button>
+<div>{{user | json}}</div>
+<hr>
+<ng-container *ngFor="let item of show_data[0]">
+    <div class="block" *appRole="item.role">
+        <img #asImage class="img" [src]="item.url" alt="">
+    </div>
+</ng-container>
